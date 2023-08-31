@@ -1,39 +1,26 @@
 "use client";
-
+import useAudioPlayer from "@/hooks/useAudioPlayer";
 import Image from "next/image";
-import { useRef, useState } from "react";
-import ReactPlayer from "react-player";
+import Link from "next/link";
 
 const Player = () => {
-  const audioControl = useRef<ReactPlayer | null>(null);
-  const [playToggle, setPlayToggle] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-
-  let totalTime = audioControl?.current?.getDuration();
-  const totalChunks =
-    totalTime !== undefined &&
-    parseInt(((currentTime / totalTime) * 100).toString());
-
-  let progressBarWidth = totalChunks * 10;
-  let props = audioControl?.current?.props;
-
-  console.log(props);
-
-  const getTimeFunction = () => {
-    setPlayToggle(!playToggle);
-    // Check if the audioControl ref exists and the player is playing
-    if (playToggle == true) {
-      // Use setInterval to update currentTime every second
-      const intervalId = setInterval(() => {
-        const newCurrentTime = audioControl?.current?.getCurrentTime();
-        if (newCurrentTime !== undefined) {
-          setCurrentTime(newCurrentTime);
-        }
-      }, 1000); // Update every second
-      return () => clearInterval(intervalId);
-    }
-    // Cleanup the interval when the component unmounts or when playToggle changes
-  };
+  const {
+    playToggle,
+    audioRef,
+    progressBarRef,
+    progress,
+    duration,
+    currentTime,
+    handlePlayToggle,
+    handleFastReverse,
+    handleFastForward,
+    handleProgressBarMouseDown,
+    handleProgressBarMouseUp,
+    handleProgressBarMouseLeave,
+    handleProgressBarInteraction,
+    handleProgressBarMouseMove,
+    handleProgress,
+  } = useAudioPlayer();
 
   return (
     // <!-- player section start -->
@@ -56,41 +43,49 @@ const Player = () => {
                   RJ Alex 1:15-2:45 PM <span className="live-status">Live</span>
                 </p>
 
-                <ReactPlayer
-                  width={0}
-                  height={0}
-                  controls
-                  // onSeek={}
-                  playing={playToggle}
-                  url="/audio/main.mp3"
-                  ref={audioControl}
-                  config={{
-                    file: {
-                      forceAudio: true,
-                    },
-                  }}
-                />
+                <audio
+                  onTimeUpdate={handleProgress}
+                  ref={audioRef}
+                  src="/audio/main.mp3"
+                ></audio>
                 <div className={`maudio ${playToggle && "playing"}`}>
                   <div className="audio-control">
-                    <a href="javascript:;" className="fast-reverse"></a>
+                    <Link
+                      href="javascript:;"
+                      className="fast-reverse"
+                      onClick={handleFastReverse}
+                    ></Link>
                     <a
                       onClick={() => {
-                        getTimeFunction();
-                        // setPlayToggle(!playToggle);
+                        handlePlayToggle();
                       }}
                       href="javascript:;"
-                      className="play"
+                      className={`play ${playToggle && "pause"}`}
                     ></a>
-                    <a href="javascript:;" className="fast-forward"></a>
-                    <div className="progress-bar" style={{ width: "50%" }}>
+                    <Link
+                      onClick={handleFastForward}
+                      href="javascript:;"
+                      className="fast-forward"
+                    ></Link>
+                    <div
+                      className="progress-bar"
+                      ref={progressBarRef}
+                      onClick={handleProgressBarInteraction}
+                      onMouseDown={handleProgressBarMouseDown}
+                      onMouseUp={handleProgressBarMouseUp}
+                      onMouseMove={handleProgressBarMouseMove}
+                      onMouseLeave={handleProgressBarMouseLeave}
+                    >
                       <div
                         className="progress-pass"
-                        style={{ width: progressBarWidth }}
+                        style={{ width: `${progress}%` }}
                       ></div>
                     </div>
                     <div className="time-keep">
-                      <span className="current-time">01:42</span> /
-                      <span className="duration">01:42</span>
+                      <span className="current-time">
+                        {formatTime(currentTime)}
+                      </span>{" "}
+                      / <span className="duration">{formatTime(duration)}</span>
                     </div>
                     <a className="mute"></a>
                     <div className="volume-bar">
@@ -98,8 +93,6 @@ const Player = () => {
                     </div>
                   </div>
                 </div>
-                {/* @ts-ignore */}
-                {/* <button onClick={toggle}>{playing ? "Pause" : "Play"}</button> */}
               </div>
             </div>
           </div>
@@ -111,3 +104,13 @@ const Player = () => {
 };
 
 export default Player;
+
+// Function to format time in MM:SS format
+const formatTime = (timeInSeconds: number) => {
+  const minutes = Math.floor(timeInSeconds / 60);
+  const seconds = Math.floor(timeInSeconds % 60);
+  const formattedTime = `${String(minutes).padStart(2, "0")}:${String(
+    seconds
+  ).padStart(2, "0")}`;
+  return formattedTime;
+};

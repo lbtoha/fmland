@@ -3,6 +3,7 @@ import About from "@/components/pages/home-1/About";
 import Banner from "@/components/pages/home-1/Banner";
 import Blog from "@/components/pages/home-1/Blog";
 import ExpertRj from "@/components/pages/home-1/ExpertRj";
+import Footer from "@/components/pages/home-1/Footer";
 import MusicShow from "@/components/pages/home-1/MusicShow";
 import Player from "@/components/pages/home-1/Player";
 import PreviousShow from "@/components/pages/home-1/PreviousShow";
@@ -26,6 +27,7 @@ const page = () => {
       <Testimonial />
       <Blog />
       <SubscribeNewsLetter />
+      <Footer />
     </>
   );
 };

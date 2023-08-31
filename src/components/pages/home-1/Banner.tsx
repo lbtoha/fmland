@@ -35,7 +35,7 @@ const Banner = () => {
             </div>
           </div>
           <div className="col-md-6 order-md-2 order-1 text-md-start text-center">
-            <Link href="show-details.html" className="play-btn">
+            <Link href="/show-details" className="play-btn">
               <i className="fas fa-play"></i>
             </Link>
           </div>

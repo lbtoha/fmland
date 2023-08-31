@@ -1,10 +1,10 @@
 "use client";
 import "@/app/globals.css";
-import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/navbar/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { usePathname } from "next/navigation";
 import { Suspense, useEffect } from "react";
 import "react-h5-audio-player/lib/styles.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -25,17 +25,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  console.log(pathname);
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
   }, []);
   return (
     <html lang="en">
-      <body>
+      <body className={`${pathname === "/home-three" ? "home-red" : " "}`}>
         <NavBar />
         <Suspense fallback={<Loading />}>
           <main className="site-body">{children}</main>
         </Suspense>
-        <Footer />
       </body>
     </html>
   );
