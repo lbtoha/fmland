@@ -1,6 +1,6 @@
 import Blog from "@/components/pages/blog/Blog";
-import SubscribeNewsLetter from "@/components/pages/home-1/SubscribeNewsLetter";
 import PageBanner from "@/components/shared/PageBanner";
+import SubscribeNewsLetter from "@/components/shared/SubscribeNewsLetter";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

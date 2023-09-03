@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
+import Counter from "./Counter";
 
 const MusicShow = () => {
   return (
-    //  <!-- music show section start -->
+    //   music show section start
     <section className="pt-120 pb-120 section-bg">
       <div className="container">
         <div className="row gy-4 justify-content-between align-items-center">
@@ -30,13 +32,18 @@ const MusicShow = () => {
             <div className="row gx-sm-5 counter-item-wrapper">
               <div className="col-auto">
                 <div className="counter-item style-two">
-                  <h3 className="counter-amount">24K</h3>
+                  <h3 className="counter-amount">
+                    <Counter start={0} end={24} />
+                    <span>K</span>
+                  </h3>
                   <h4 className="countrer-title">Listener</h4>
                 </div>
               </div>
               <div className="col-auto">
                 <div className="counter-item style-two">
-                  <h3 className="counter-amount">50+</h3>
+                  <h3 className="counter-amount">
+                    <Counter start={0} end={50} />+
+                  </h3>
                   <h4 className="countrer-title">Radio Jockey</h4>
                 </div>
               </div>
@@ -45,7 +52,7 @@ const MusicShow = () => {
         </div>
       </div>
     </section>
-    //<!-- music show section end -->
+    // music show section end
   );
 };
 

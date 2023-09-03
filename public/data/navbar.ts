@@ -57,6 +57,11 @@ export const navbarItems = [
         dropDownLink: "/jockey-details",
       },
       {
+        id: 120154,
+        dropDownItem: "Blog Details",
+        dropDownLink: "/blog-details",
+      },
+      {
         id: 12012,
         dropDownItem: "FAQ",
         dropDownLink: "/faq",

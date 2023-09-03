@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    // <!-- contact section start -->
+    //  contact section start
     <section className="pt-120 pb-120">
       <div className="container">
         <div className="row justify-content-center">
@@ -11,7 +11,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
         <div className="row gy-5">
           <div className="col-lg-6">
             <form className="row gy-4 contact-form">
@@ -85,7 +85,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-    //<!-- contact section end -->
+    // contact section end
   );
 };
 

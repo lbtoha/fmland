@@ -1,8 +1,9 @@
+import Counter from "@/components/shared/Counter";
 import Image from "next/image";
 
 const Experience = () => {
   return (
-    // <!-- Experiences section start -->
+    //  Experiences section start
     <section className="pt-120 pb-120 section-bg position-relative z-index2">
       <div className="bottom-box-shape">
         <Image
@@ -23,25 +24,34 @@ const Experience = () => {
             <div className="row gy-4">
               <div className="col-sm-6">
                 <div className="counter-item">
-                  <h4 className="counter-item-amount">24K+</h4>
+                  <h4 className="counter-item-amount">
+                    <Counter start={0} end={24} />
+                    K+
+                  </h4>
                   <p className="counter-item-title">Listener</p>
                 </div>
               </div>
               <div className="col-sm-6">
                 <div className="counter-item">
-                  <h4 className="counter-item-amount">50+</h4>
+                  <h4 className="counter-item-amount">
+                    <Counter start={0} end={50} />+
+                  </h4>
                   <p className="counter-item-title">Radio Jockey</p>
                 </div>
               </div>
               <div className="col-sm-6">
                 <div className="counter-item">
-                  <h4 className="counter-item-amount">30+</h4>
+                  <h4 className="counter-item-amount">
+                    <Counter start={0} end={30} />+
+                  </h4>
                   <p className="counter-item-title">Shows</p>
                 </div>
               </div>
               <div className="col-sm-6">
                 <div className="counter-item">
-                  <h4 className="counter-item-amount">20+</h4>
+                  <h4 className="counter-item-amount">
+                    <Counter start={0} end={20} />+
+                  </h4>
                   <p className="counter-item-title">Awards</p>
                 </div>
               </div>
@@ -50,7 +60,7 @@ const Experience = () => {
         </div>
       </div>
     </section>
-    // <!-- Experiences section end -->
+    //  Experiences section end
   );
 };
 

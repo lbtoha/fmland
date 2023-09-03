@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ContactInfo = () => {
   return (
-    //  <!-- contact info section start -->
+    //   contact info section start
     <section className="pt-120 pb-120 section-bg">
       <div className="container">
         <div className="row justify-content-center">
@@ -13,7 +13,7 @@ const ContactInfo = () => {
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
         <div className="row gy-4">
           <div className="col-lg-4">
             <div className="contact-item">
@@ -75,7 +75,7 @@ const ContactInfo = () => {
         </div>
       </div>
     </section>
-    //   <!-- contact info section end -->
+    //    contact info section end
   );
 };
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const SubscribeNewsLetter = () => {
   return (
-    // <!-- subscribe section start -->
+    //  subscribe section start
     <section className="subscribe-section style-two">
       <div className="side-img">
         <Image
@@ -37,7 +37,7 @@ const SubscribeNewsLetter = () => {
         </div>
       </div>
     </section>
-    //   <!-- subscribe section end -->
+    //    subscribe section end
   );
 };
 

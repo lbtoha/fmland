@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
   return (
-    // <!-- about section start -->
+    //  about section start
     <section className="pt-120 pb-120 section-bg overflow-hidden">
       <div className="container">
         <div className="row gy-5 align-items-center justify-content-between">
@@ -33,15 +34,15 @@ const About = () => {
                 tellus tincidunt elementum feugiat sed sit ultrices. Adipiscing
                 non lacinia laoreet dui pulvinar tristique.{" "}
               </p>
-              <a href="about.html" className="btn btn-main">
+              <Link href="/about" className="btn btn-main">
                 See More
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </section>
-    // <!-- about section end -->
+    //  about section end
   );
 };
 

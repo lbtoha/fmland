@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const UpComingShow = () => {
   return (
-    //<!-- upcoming section start -->
+    // upcoming section start
     <section className="upcoming-section pt-120 pb-120">
       <div className="container">
         <div className="row justify-content-end gy-4">
@@ -43,7 +43,7 @@ const UpComingShow = () => {
         </div>
       </div>
     </section>
-    //<!-- upcoming section end -->
+    // upcoming section end
   );
 };
 

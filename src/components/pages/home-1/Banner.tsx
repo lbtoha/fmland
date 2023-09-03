@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Banner = () => {
   return (
-    // <!-- banner section start -->
+    //  banner section start
     <section
       className="banner-section"
       style={{ backgroundImage: "url('/images/bg/banner-bg.png')" }}
@@ -42,7 +42,7 @@ const Banner = () => {
         </div>
       </div>
     </section>
-    // {/* <!-- banner section end --> */}
+    //   banner section end
   );
 };
 

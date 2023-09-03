@@ -1,6 +1,7 @@
 "use client";
 import useAudioPlayer from "@/hooks/useAudioPlayer";
 import Image from "next/image";
+import AudioPlayerWithProgressBar from "./AudioPlayerWithProgressBar";
 
 const Banner = () => {
   const {
@@ -8,8 +9,6 @@ const Banner = () => {
     audioRef,
     progressBarRef,
     progress,
-    duration,
-    currentTime,
     handlePlayToggle,
     handleFastReverse,
     handleFastForward,
@@ -21,7 +20,7 @@ const Banner = () => {
     handleProgress,
   } = useAudioPlayer();
   return (
-    // <!-- banner section start -->
+    //  banner section start
     <section
       className="banner-section style-two"
       style={{ backgroundImage: "url('/images/bg/banner-bg2.jpg')" }}
@@ -37,7 +36,7 @@ const Banner = () => {
             </p>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
         <div className="row">
           <div className="col-lg-12">
             <div className="single-audio-player style-two">
@@ -57,53 +56,7 @@ const Banner = () => {
                     <span className="live-status">Live</span>
                   </p>
                 </div>
-
-                <div className={`maudio ${playToggle && "playing"}`}>
-                  <audio
-                    onTimeUpdate={handleProgress}
-                    ref={audioRef}
-                    src="/audio/main.mp3"
-                  ></audio>
-                  <div className="audio-control">
-                    <a
-                      onClick={handleFastReverse}
-                      href="javascript:;"
-                      className="fast-reverse"
-                    ></a>
-                    <a
-                      onClick={handlePlayToggle}
-                      href="javascript:;"
-                      className="play"
-                    ></a>
-                    <a
-                      href="javascript:;"
-                      onClick={handleFastForward}
-                      className="fast-forward"
-                    ></a>
-                    <div
-                      className="progress-bar"
-                      ref={progressBarRef}
-                      onClick={handleProgressBarInteraction}
-                      onMouseDown={handleProgressBarMouseDown}
-                      onMouseUp={handleProgressBarMouseUp}
-                      onMouseMove={handleProgressBarMouseMove}
-                      onMouseLeave={handleProgressBarMouseLeave}
-                    >
-                      <div
-                        className="progress-pass"
-                        style={{ width: `${progress}%` }}
-                      ></div>
-                    </div>
-                    <div className="time-keep">
-                      <span className="current-time">00:02</span> /
-                      <span className="duration">01:42</span>
-                    </div>
-                    <a className="mute"></a>
-                    <div className="volume-bar">
-                      <div className="volume-pass"></div>
-                    </div>
-                  </div>
-                </div>
+                <AudioPlayerWithProgressBar audio="/audio/main.mp3" />
               </div>
             </div>
           </div>
@@ -111,7 +64,7 @@ const Banner = () => {
       </div>
     </section>
 
-    //  <!-- banner section end -->
+    //   banner section end
   );
 };
 

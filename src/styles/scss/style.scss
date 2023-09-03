@@ -49,13 +49,3 @@
 
 // theme
 @import "./theme/red";
-
-$rhap_theme-color: #ff26c2; // Color of all buttons and volume/progress indicators
-$rhap_background-color: inherit; // Color of the player background
-$rhap_bar-color: #00786c; // Color of volume and progress bar
-$rhap_time-color: #333; // Font color of current time and duration
-$rhap_font-family: inherit !default;
-
-.rhap_container {
-  background: inherit;
-}

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Footer = () => {
+const FooterThree = () => {
   return (
-    // <!-- footer section start -->
+    //  footer section start
     <footer className="footer-section">
       <div className="container">
         <div className="row gy-5 justify-content-between">
@@ -44,19 +44,19 @@ const Footer = () => {
             <h5>Overview</h5>
             <ul className="footer-general-menu">
               <li>
-                <Link href="#0">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li>
                 <Link href="#0">Pages</Link>
               </li>
               <li>
-                <Link href="#0">Show schedule</Link>
+                <Link href="/show-schedule">Show schedule</Link>
               </li>
               <li>
-                <Link href="#0">Blog</Link>
+                <Link href="/blog">Blog</Link>
               </li>
               <li>
-                <Link href="#0">Contact</Link>
+                <Link href="/contact-us">Contact</Link>
               </li>
             </ul>
           </div>
@@ -64,7 +64,7 @@ const Footer = () => {
             <h5>Services</h5>
             <ul className="footer-general-menu">
               <li>
-                <Link href="#0">About</Link>
+                <Link href="/about">About</Link>
               </li>
               <li>
                 <Link href="#0">Terms & Condition</Link>
@@ -93,7 +93,7 @@ const Footer = () => {
           <div className="row gy-3 align-items-center">
             <div className="col-lg-6">
               <p className="copy-right-text text-lg-start text-center">
-                © 2022 FMland. All rights reserved
+                © {new Date().getFullYear()} FMland. All rights reserved
               </p>
             </div>
             <div className="col-lg-6">
@@ -127,4 +127,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterThree;

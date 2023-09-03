@@ -1,6 +1,10 @@
 "use client";
-import Image from "next/image";
+import NextArrow from "@/components/shared/NextArrow";
+import PrevArrow from "@/components/shared/PrevArrow";
+import TestimonialCard from "@/components/shared/TestimonialCard";
+import { MouseEvent } from "react";
 import Slider from "react-slick";
+import testimonialData from "../../../../public/data/testimonial";
 
 const Testimonial = () => {
   const setting = {
@@ -10,18 +14,26 @@ const Testimonial = () => {
     dots: false,
     arrows: true,
     prevArrow: (
-      <button type="button" className="prev">
-        <i className="fas fa-chevron-left"></i>
-      </button>
+      <PrevArrow
+        currentSlide={0}
+        slideCount={0}
+        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+          console.log("clicked");
+        }}
+      />
     ),
     nextArrow: (
-      <button type="button" className="next">
-        <i className="fas fa-chevron-right"></i>
-      </button>
+      <NextArrow
+        currentSlide={0}
+        slideCount={0}
+        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+          console.log("clicked");
+        }}
+      />
     ),
     autoplay: false,
     cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
-    speed: 1000,
+    speed: 600,
     autoplaySpeed: 500,
     responsive: [
       {
@@ -51,7 +63,7 @@ const Testimonial = () => {
     ],
   };
   return (
-    // <!-- testimonial section start -->
+    //  testimonial section start
     <section
       className="testimonial-section has-overlay pt-120 pb-120 overflow-hidden"
       style={{ backgroundImage: "url('assets/images/bg/testimonial.jpg')" }}
@@ -65,164 +77,17 @@ const Testimonial = () => {
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
         <Slider {...setting} className="testimonial-slider">
-          <div className="single-slide">
-            <div className="testimonial-item style-two">
-              <i className="fas fa-quote-right testimonial-quote"></i>
-              <div className="testimonial-client">
-                <div className="client-thumb">
-                  <Image
-                    width={81}
-                    height={81}
-                    src="/images/testimonial/1.jpg"
-                    alt="image"
-                  />
-                </div>
-                <div className="client-content">
-                  <h5 className="client-nae">Alino</h5>
-                  <p>Music Artist</p>
-                </div>
-              </div>
-              <p>
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Dignissim imperdiet justo, sapien viverra commodo id duis
-                praesent tempus.”
-              </p>
-            </div>
-          </div>
-          {/* <!-- single-slide end --> */}
-          <div className="single-slide">
-            <div className="testimonial-item style-two">
-              <i className="fas fa-quote-right testimonial-quote"></i>
-              <div className="testimonial-client">
-                <div className="client-thumb">
-                  <Image
-                    width={81}
-                    height={81}
-                    src="/images/testimonial/2.jpg"
-                    alt="image"
-                  />
-                </div>
-                <div className="client-content">
-                  <h5 className="client-nae">Ranio</h5>
-                  <p>Music Artist</p>
-                </div>
-              </div>
-              <p>
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Dignissim imperdiet justo, sapien viverra commodo id duis
-                praesent tempus.”
-              </p>
-            </div>
-          </div>
-          {/* <!-- single-slide end --> */}
-          <div className="single-slide">
-            <div className="testimonial-item style-two">
-              <i className="fas fa-quote-right testimonial-quote"></i>
-              <div className="testimonial-client">
-                <div className="client-thumb">
-                  <Image
-                    width={81}
-                    height={81}
-                    src="/images/testimonial/3.jpg"
-                    alt="image"
-                  />
-                </div>
-                <div className="client-content">
-                  <h5 className="client-nae">Jesicca</h5>
-                  <p>Music Artist</p>
-                </div>
-              </div>
-              <p>
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Dignissim imperdiet justo, sapien viverra commodo id duis
-                praesent tempus.”
-              </p>
-            </div>
-          </div>
-          {/* <!-- single-slide end --> */}
-          <div className="single-slide">
-            <div className="testimonial-item style-two">
-              <i className="fas fa-quote-right testimonial-quote"></i>
-              <div className="testimonial-client">
-                <div className="client-thumb">
-                  <Image
-                    width={81}
-                    height={81}
-                    src="/images/testimonial/4.jpg"
-                    alt="image"
-                  />
-                </div>
-                <div className="client-content">
-                  <h5 className="client-nae">Alex</h5>
-                  <p>Music Artist</p>
-                </div>
-              </div>
-              <p>
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Dignissim imperdiet justo, sapien viverra commodo id duis
-                praesent tempus.”
-              </p>
-            </div>
-          </div>
-          {/* <!-- single-slide end --> */}
-          <div className="single-slide">
-            <div className="testimonial-item style-two">
-              <i className="fas fa-quote-right testimonial-quote"></i>
-              <div className="testimonial-client">
-                <div className="client-thumb">
-                  <Image
-                    width={81}
-                    height={81}
-                    src="/images/testimonial/1.jpg"
-                    alt="image"
-                  />
-                </div>
-                <div className="client-content">
-                  <h5 className="client-nae">Alino</h5>
-                  <p>Music Artist</p>
-                </div>
-              </div>
-              <p>
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Dignissim imperdiet justo, sapien viverra commodo id duis
-                praesent tempus.”
-              </p>
-            </div>
-          </div>
-          {/* <!-- single-slide end --> */}
-          <div className="single-slide">
-            <div className="testimonial-item style-two">
-              <i className="fas fa-quote-right testimonial-quote"></i>
-              <div className="testimonial-client">
-                <div className="client-thumb">
-                  <Image
-                    width={81}
-                    height={81}
-                    src="/images/testimonial/2.jpg"
-                    alt="image"
-                  />
-                </div>
-                <div className="client-content">
-                  <h5 className="client-nae">Ranio</h5>
-                  <p>Music Artist</p>
-                </div>
-              </div>
-              <p>
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Dignissim imperdiet justo, sapien viverra commodo id duis
-                praesent tempus.”
-              </p>
-            </div>
-          </div>
-          {/* <!-- single-slide end --> */}
+          {testimonialData.map(({ id, ...props }) => (
+            <TestimonialCard key={id} {...props} />
+          ))}
         </Slider>
-        {/* <!-- testimonial-slider end --> */}
+        {/*  testimonial-slider end  */}
       </div>
     </section>
 
-    //<!-- testimonial section end -->
+    // testimonial section end
   );
 };
 

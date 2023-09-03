@@ -1,8 +1,8 @@
 import UpCommingShow from "@/components/pages/about/UpCommingShow";
-import SubscribeNewsLetter from "@/components/pages/home-1/SubscribeNewsLetter";
 import PageBanner from "@/components/shared/PageBanner";
 import PodcastSchedule from "@/components/shared/PodcastSchedule";
 import PreviousShows from "@/components/shared/PreviousShows";
+import SubscribeNewsLetter from "@/components/shared/SubscribeNewsLetter";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

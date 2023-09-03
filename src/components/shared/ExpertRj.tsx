@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 const ExpertRj = ({ children }: { children: ReactNode }) => {
   return (
     //
-    //    <!-- rj section start -->
+    //     rj section start
     <section className="pt-120 pb-120 section-bg">
       <div className="container">
         <div className="row justify-content-center">
@@ -18,7 +18,7 @@ const ExpertRj = ({ children }: { children: ReactNode }) => {
         {children}
       </div>
     </section>
-    // <!-- rj section end --> */}
+    //  rj section end  */}
   );
 };
 

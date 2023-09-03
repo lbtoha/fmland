@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ShowDetails = () => {
   return (
-    // <!-- show details section start -->
+    //  show details section start
     <section className="pt-120 pb-120 section-bg">
       <div className="container">
         <div className="row gy-4 justify-content-between align-items-center">
@@ -44,7 +44,7 @@ const ShowDetails = () => {
         </div>
       </div>
     </section>
-    // <!-- show details section end -->
+    //  show details section end
   );
 };
 

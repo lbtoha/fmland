@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    // <!-- about section start -->
+    //  about section start
     <section className="pt-120 pb-120 section-bg overflow-hidden">
       <div className="container">
         <div className="row gy-4 align-items-center justify-content-between">
@@ -34,7 +34,7 @@ const About = () => {
                 tellus tincidunt elementum feugiat sed sit ultrices. Adipiscing
                 non lacinia laoreet dui pulvinar tristique.{" "}
               </p>
-              <Link href="show-schedule.html" className="btn btn-main">
+              <Link href="/show-schedule" className="btn btn-main">
                 See More
               </Link>
             </div>
@@ -42,7 +42,7 @@ const About = () => {
         </div>
       </div>
     </section>
-    // <!-- about section end -->
+    //  about section end
   );
 };
 

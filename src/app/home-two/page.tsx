@@ -1,7 +1,6 @@
 import Blog from "@/components/pages/home-1/Blog";
 import About from "@/components/pages/homeTwo/About";
 import Banner from "@/components/pages/homeTwo/Banner";
-import Footer from "@/components/pages/homeTwo/Footer";
 import MusicShow from "@/components/pages/homeTwo/MusicShow";
 import PodcastSection from "@/components/pages/homeTwo/PodcastSection";
 import Rj from "@/components/pages/homeTwo/Rj";
@@ -33,7 +32,6 @@ const page = () => {
       <Testimonial />
       <Blog />
       <SubscribeNewsLetter bg="images/bg/subscribe2.jpg" />
-      <Footer />
     </>
   );
 };

@@ -1,6 +1,9 @@
 "use client";
+import { MouseEvent } from "react";
 import Slider from "react-slick";
 import PreviousShowsCard from "../pages/about/PreviousShowsCard";
+import NextArrow from "./NextArrow";
+import PrevArrow from "./PrevArrow";
 
 const PreviousShows = () => {
   const setting = {
@@ -10,18 +13,27 @@ const PreviousShows = () => {
     dots: false,
     arrows: true,
     prevArrow: (
-      <button type="button" className="prev">
-        <i className="fas fa-chevron-left"></i>
-      </button>
+      <PrevArrow
+        currentSlide={0}
+        slideCount={0}
+        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+          console.log("clicked");
+        }}
+      />
     ),
     nextArrow: (
-      <button type="button" className="next">
-        <i className="fas fa-chevron-right"></i>
-      </button>
+      <NextArrow
+        currentSlide={0}
+        slideCount={0}
+        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+          console.log("clicked");
+        }}
+      />
     ),
+
     autoplay: false,
     cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
-    speed: 1000,
+    speed: 600,
     autoplaySpeed: 500,
     centerMode: true,
     centerPadding: "308px",
@@ -61,7 +73,7 @@ const PreviousShows = () => {
     ],
   };
   return (
-    // <!-- previous show section start -->
+    //  previous show section start
     <section
       className="previous-show-section pt-120 pb-120 overflow-hidden"
       style={{ backgroundImage: "url('/images/bg/previous-show.jpg')" }}
@@ -75,7 +87,7 @@ const PreviousShows = () => {
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
       </div>
       <Slider {...setting} className="previous-show-slider">
         <PreviousShowsCard />
@@ -86,7 +98,7 @@ const PreviousShows = () => {
         <PreviousShowsCard />
       </Slider>
     </section>
-    //  <!-- previous show section end -->
+    //   previous show section end
   );
 };
 

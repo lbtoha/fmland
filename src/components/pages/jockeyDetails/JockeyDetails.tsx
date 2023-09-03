@@ -1,9 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const JockeyDetails = () => {
   return (
-    //
-    //   <!-- rj details section start -->
+    //    rj details section start
     <section className="pt-120 pb-120 section-bg">
       <div className="container">
         <div className="row gy-4 justify-content-between">
@@ -22,24 +22,24 @@ const JockeyDetails = () => {
               <p className="rj-details-designation">Music Artist</p>
               <ul className="rj-social-links justify-content-center">
                 <li>
-                  <a href="#0">
+                  <Link href="#0">
                     <i className="fab fa-facebook-f"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#0">
+                  <Link href="#0">
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#0">
+                  <Link href="#0">
                     <i className="fab fa-linkedin-in"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#0">
+                  <Link href="#0">
                     <i className="fab fa-twitter"></i>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -80,7 +80,7 @@ const JockeyDetails = () => {
                 </div>
               </div>
             </div>
-            {/* <!-- rj-details-box end --> */}
+            {/*  rj-details-box end  */}
             <div className="rj-details-box">
               <h5 className="title">Biography</h5>
               <p>
@@ -91,7 +91,7 @@ const JockeyDetails = () => {
                 aliquet molestie malesuada magnis arcu.{" "}
               </p>
             </div>
-            {/* <!-- rj-details-box end --> */}
+            {/*  rj-details-box end  */}
             <div className="rj-details-box">
               <div className="row gy-4">
                 <div className="col-lg-5">
@@ -114,13 +114,12 @@ const JockeyDetails = () => {
                 </div>
               </div>
             </div>
-            {/* <!-- rj-details-box end --> */}
+            {/*  rj-details-box end  */}
           </div>
         </div>
       </div>
     </section>
-    //
-    //    <!-- rj details section end -->
+    //     rj details section end
   );
 };
 

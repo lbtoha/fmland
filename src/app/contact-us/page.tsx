@@ -1,7 +1,8 @@
 import Contact from "@/components/contactUs/Contact";
 import ContactInfo from "@/components/contactUs/ContactInfo";
-import SubscribeNewsLetter from "@/components/pages/home-1/SubscribeNewsLetter";
+
 import PageBanner from "@/components/shared/PageBanner";
+import SubscribeNewsLetter from "@/components/shared/SubscribeNewsLetter";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

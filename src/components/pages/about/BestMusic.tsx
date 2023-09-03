@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const BestMusic = () => {
   return (
-    // <!-- about section start -->
+    //  about section start
     <section className="pt-120 pb-120 section-bg overflow-hidden">
       <div className="container">
         <div className="row gy-4 align-items-center justify-content-between">
@@ -35,7 +35,7 @@ const BestMusic = () => {
         </div>
       </div>
     </section>
-    //  <!-- about section end -->
+    //   about section end
   );
 };
 

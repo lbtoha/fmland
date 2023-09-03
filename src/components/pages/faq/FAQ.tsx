@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const FAQ = () => {
   return (
-    // <!-- faq section start -->
+    //  faq section start
     <section className="pt-120 pb-120 section-bg">
       <div className="container">
         <div className="row">
@@ -210,7 +210,7 @@ const FAQ = () => {
       </div>
     </section>
 
-    //  <!-- faq section end -->
+    //   faq section end
   );
 };
 

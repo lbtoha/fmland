@@ -1,6 +1,9 @@
 "use client";
 import ExpertRj from "@/components/shared/ExpertRj";
 import ExpertRjSliderCard from "@/components/shared/ExpertRjSliderCard";
+import NextArrow from "@/components/shared/NextArrow";
+import PrevArrow from "@/components/shared/PrevArrow";
+import { MouseEvent } from "react";
 import Slider from "react-slick";
 import { radioJockeys } from "../../../../public/data/radioJockey";
 
@@ -13,14 +16,22 @@ const RadioExpertRj = () => {
     dots: false,
     arrows: true,
     prevArrow: (
-      <button type="button" className="prev">
-        <i className="fas fa-chevron-left"></i>
-      </button>
+      <PrevArrow
+        currentSlide={0}
+        slideCount={0}
+        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+          console.log("clicked");
+        }}
+      />
     ),
     nextArrow: (
-      <button type="button" className="next">
-        <i className="fas fa-chevron-right"></i>
-      </button>
+      <NextArrow
+        currentSlide={0}
+        slideCount={0}
+        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+          console.log("clicked");
+        }}
+      />
     ),
     autoplay: false,
     cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",

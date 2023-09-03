@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Gest = () => {
   return (
-    //  <!-- guest section start -->
+    //   guest section start
     <section className="pb-120 section-bg">
       <div className="container">
         <h3 className="guest-area-title">Gest</h3>
@@ -66,7 +66,7 @@ const Gest = () => {
         </div>
       </div>
     </section>
-    // <!-- guest section end -->
+    //  guest section end
   );
 };
 

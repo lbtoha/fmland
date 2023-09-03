@@ -1,7 +1,6 @@
 "use client";
 import Banner from "@/components/pages/homeThree/Banner";
 import Experience from "@/components/pages/homeThree/Experience";
-import Footer from "@/components/pages/homeThree/Footer";
 import LatestMusic from "@/components/pages/homeThree/LatestMusic";
 import LifeEventMusic from "@/components/pages/homeThree/LifeEventMusic";
 import LivePodcast from "@/components/pages/homeThree/LivePodcast";
@@ -30,7 +29,6 @@ const page = () => {
       <Rj />
       <Testimonial />
       <SubscribeNewsLetter />
-      <Footer />
     </>
   );
 };

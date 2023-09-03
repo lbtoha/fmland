@@ -3,7 +3,7 @@ import BlogCard from "@/components/shared/BlogCard";
 
 const Blog = () => {
   return (
-    // <!-- blog section start -->
+    //  blog section start
     <section className="pt-120 pb-120">
       <div className="container">
         <div className="row justify-content-center">
@@ -14,7 +14,7 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
 
         <div className="row gy-4 justify-content-center">
           {blogData
@@ -31,7 +31,7 @@ const Blog = () => {
         </div>
       </div>
     </section>
-    //<!-- blog section end -->
+    // blog section end
   );
 };
 

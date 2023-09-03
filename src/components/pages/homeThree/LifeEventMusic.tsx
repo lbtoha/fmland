@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const LifeEventMusic = () => {
   return (
-    //  <!-- Life event music show section start -->
+    //   Life event music show section start
     <section className="pt-120 pb-120 position-relative z-index2 section-bg">
       <div className="dot-shape">
         <Image
@@ -32,16 +33,16 @@ const LifeEventMusic = () => {
                 tellus tincidunt elementum feugiat sed sit ultrices. Adipiscing
                 non lacinia laoreet dui pulvinar tristique.
               </p>
-              <a href="#0" className="btn btn-main mt-40">
+              <Link href="#0" className="btn btn-main mt-40">
                 See More
-              </a>
+              </Link>
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
       </div>
     </section>
-    //  <!-- Life event music show section end -->
+    //   Life event music show section end
   );
 };
 

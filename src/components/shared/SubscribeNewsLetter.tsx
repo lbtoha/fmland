@@ -4,7 +4,7 @@ type Prop = {
 
 const SubscribeNewsLetter = ({ bg = "/images/bg/subscribe.jpg" }: Prop) => {
   return (
-    // <!-- subscribe section start -->
+    //  subscribe section start
     <section
       className="subscribe-section"
       style={{ backgroundImage: `url(${bg})` }}
@@ -31,7 +31,7 @@ const SubscribeNewsLetter = ({ bg = "/images/bg/subscribe.jpg" }: Prop) => {
         </div>
       </div>
     </section>
-    // <!-- subscribe section end -->
+    //  subscribe section end
   );
 };
 

@@ -5,14 +5,15 @@ import Slider from "react-slick";
 const Sponsor = () => {
   const setting = {
     infinite: true,
+
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
     slidesToShow: 6,
     slidesToScroll: 1,
     dots: false,
     arrows: false,
-    autoplay: false,
-    cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
-    speed: 1000,
-    autoplaySpeed: 500,
     responsive: [
       {
         breakpoint: 1200,
@@ -42,7 +43,7 @@ const Sponsor = () => {
   };
   return (
     //
-    // <!-- sponsor section start -->
+    //  sponsor section start
     <section className="pt-120 pb-120">
       <div className="container-fluid">
         <div className="row justify-content-center">
@@ -54,7 +55,7 @@ const Sponsor = () => {
           </div>
         </div>
         {/* 
-        // <!-- row end --> */}
+        //  row end  */}
         <Slider {...setting} className="sponsor-slider">
           <div className="single-slide">
             <div className="sponsor-item">
@@ -66,7 +67,7 @@ const Sponsor = () => {
               />
             </div>
           </div>
-          {/* <!-- single-slide end --> */}
+          {/*  single-slide end  */}
           <div className="single-slide">
             <div className="sponsor-item">
               <Image
@@ -77,7 +78,7 @@ const Sponsor = () => {
               />
             </div>
           </div>
-          {/* <!-- single-slide end --> */}
+          {/*  single-slide end  */}
           <div className="single-slide">
             <div className="sponsor-item">
               <Image
@@ -88,7 +89,7 @@ const Sponsor = () => {
               />
             </div>
           </div>
-          {/* <!-- single-slide end --> */}
+          {/*  single-slide end  */}
           <div className="single-slide">
             <div className="sponsor-item">
               <Image
@@ -99,7 +100,7 @@ const Sponsor = () => {
               />
             </div>
           </div>
-          {/* <!-- single-slide end --> */}
+          {/*  single-slide end  */}
           <div className="single-slide">
             <div className="sponsor-item">
               <Image
@@ -110,7 +111,7 @@ const Sponsor = () => {
               />
             </div>
           </div>
-          {/* <!-- single-slide end --> */}
+          {/*  single-slide end  */}
           <div className="single-slide">
             <div className="sponsor-item">
               <Image
@@ -121,7 +122,7 @@ const Sponsor = () => {
               />
             </div>
           </div>
-          {/* <!-- single-slide end --> */}
+          {/*  single-slide end  */}
           <div className="single-slide">
             <div className="sponsor-item">
               <Image
@@ -132,7 +133,7 @@ const Sponsor = () => {
               />
             </div>
           </div>
-          {/* <!-- single-slide end --> */}
+          {/*  single-slide end  */}
           <div className="single-slide">
             <div className="sponsor-item">
               <Image
@@ -143,13 +144,13 @@ const Sponsor = () => {
               />
             </div>
           </div>
-          {/* <!-- single-slide end --> */}
+          {/*  single-slide end  */}
         </Slider>
-        {/* <!-- sponsor-slider end --> */}
+        {/*  sponsor-slider end  */}
       </div>
     </section>
 
-    // <!-- sponsor section end --> *
+    //  sponsor section end  *
   );
 };
 

@@ -1,38 +1,39 @@
 "use client";
-import Image from "next/image";
+import podcastScheduleCardData from "@/../public/data/podcastScheduleCardData";
+import { MouseEvent } from "react";
 import Slider from "react-slick";
+import NextArrow from "./NextArrow";
+import PodcastScheduleCard from "./PodcastScheduleCard";
+import PrevArrow from "./PrevArrow";
 
 const PodcastSchedule = () => {
-  const prevArrow = (
-    <button type="button" className="prev">
-      <i className="fas fa-chevron-left"></i>
-    </button>
-  );
-  const nextArrow = (
-    <button type="button" className="next">
-      <i className="fas fa-chevron-right"></i>
-    </button>
-  );
-  var setting = {
+  const setting = {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     dots: false,
     arrows: true,
-    className: "podcast-slider",
     prevArrow: (
-      <button type="button" className="prev">
-        <i className="fas fa-chevron-left"></i>
-      </button>
+      <PrevArrow
+        currentSlide={0}
+        slideCount={0}
+        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+          console.log("clicked");
+        }}
+      />
     ),
     nextArrow: (
-      <button type="button" className="next">
-        <i className="fas fa-chevron-right"></i>
-      </button>
+      <NextArrow
+        currentSlide={0}
+        slideCount={0}
+        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+          console.log("clicked");
+        }}
+      />
     ),
     autoplay: false,
     cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
-    speed: 1000,
+    speed: 500,
     autoplaySpeed: 500,
     responsive: [
       {
@@ -62,7 +63,7 @@ const PodcastSchedule = () => {
     ],
   };
   return (
-    // <!-- podcast section start -->
+    //  podcast section start
     <section className="pt-120 pb-120">
       <div className="container">
         <div className="row justify-content-center">
@@ -183,211 +184,156 @@ const PodcastSchedule = () => {
             // tabindex="0"
           >
             <Slider {...setting} className="podcast-slider">
-              <div className="single-slide">
-                <div className="podcast-item link-item">
-                  <a href="show-details.html" className="full-link"></a>
-                  <div className="podcast-item-thumb">
-                    <Image
-                      width={306}
-                      height={360}
-                      src="/images/shows/podcast/1.jpg"
-                      alt="image"
-                    />
-                    <div className="thumb-content">
-                      <p>09:00 AM</p>
-                      <p>TO</p>
-                      <p>10:00 AM</p>
-                    </div>
-                  </div>
-                  <div className="podcast-item-content">
-                    <div className="artist-thumb">
-                      <Image
-                        width={306}
-                        height={360}
-                        src="/images/artist/1.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="artist-content">
-                      <h5 className="show-name">Music of Pop</h5>
-                      <p className="artist-name">RJ Janeski</p>
-                    </div>
-                  </div>
-                </div>
-                {/* <!-- podcast-item end --> */}
-              </div>
-              <div className="single-slide">
-                <div className="podcast-item link-item">
-                  <a href="show-details.html" className="full-link"></a>
-                  <div className="podcast-item-thumb">
-                    <Image
-                      width={306}
-                      height={360}
-                      src="/images/shows/podcast/2.jpg"
-                      alt="image"
-                    />
-                    <div className="thumb-content">
-                      <p>10:15 AM</p>
-                      <p>TO</p>
-                      <p>11:35 AM</p>
-                    </div>
-                  </div>
-                  <div className="podcast-item-content">
-                    <div className="artist-thumb">
-                      <Image
-                        width={306}
-                        height={360}
-                        src="/images/artist/2.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="artist-content">
-                      <h5 className="show-name">Music Podcast</h5>
-                      <p className="artist-name">RJ Pavis</p>
-                    </div>
-                  </div>
-                </div>
-                {/* <!-- podcast-item end --> */}
-              </div>
-              <div className="single-slide">
-                <div className="podcast-item link-item">
-                  <a href="show-details.html" className="full-link"></a>
-                  <div className="podcast-item-thumb">
-                    <Image
-                      width={306}
-                      height={360}
-                      src="/images/shows/podcast/3.jpg"
-                      alt="image"
-                    />
-                    <div className="thumb-content">
-                      <p>11:35 AM</p>
-                      <p>TO</p>
-                      <p>12:55 PM</p>
-                    </div>
-                  </div>
-                  <div className="podcast-item-content">
-                    <div className="artist-thumb">
-                      <Image
-                        width={306}
-                        height={360}
-                        src="/images/artist/3.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="artist-content">
-                      <h5 className="show-name">Live Music</h5>
-                      <p className="artist-name">RJ Josef</p>
-                    </div>
-                  </div>
-                </div>
-                {/* <!-- podcast-item end --> */}
-              </div>
-              <div className="single-slide">
-                <div className="podcast-item link-item">
-                  <a href="show-details.html" className="full-link"></a>
-                  <div className="podcast-item-thumb">
-                    <Image
-                      width={306}
-                      height={360}
-                      src="/images/shows/podcast/4.jpg"
-                      alt="image"
-                    />
-                    <div className="thumb-content">
-                      <p>01:00 PM</p>
-                      <p>TO</p>
-                      <p>02:00 PM</p>
-                    </div>
-                  </div>
-                  <div className="podcast-item-content">
-                    <div className="artist-thumb">
-                      <Image
-                        width={306}
-                        height={360}
-                        src="/images/artist/4.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="artist-content">
-                      <h5 className="show-name">News Tech</h5>
-                      <p className="artist-name">RJ Mario</p>
-                    </div>
-                  </div>
-                </div>
-                {/* <!-- podcast-item end --> */}
-              </div>
-              <div className="single-slide">
-                <div className="podcast-item link-item">
-                  <a href="show-details.html" className="full-link"></a>
-                  <div className="podcast-item-thumb">
-                    <Image
-                      width={306}
-                      height={360}
-                      src="/images/shows/podcast/1.jpg"
-                      alt="image"
-                    />
-                    <div className="thumb-content">
-                      <p>09:00 AM</p>
-                      <p>TO</p>
-                      <p>10:00 AM</p>
-                    </div>
-                  </div>
-                  <div className="podcast-item-content">
-                    <div className="artist-thumb">
-                      <Image
-                        width={306}
-                        height={360}
-                        src="/images/artist/1.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="artist-content">
-                      <h5 className="show-name">Music of Pop</h5>
-                      <p className="artist-name">RJ Janeski</p>
-                    </div>
-                  </div>
-                </div>
-                {/* <!-- podcast-item end --> */}
-              </div>
-              <div className="single-slide">
-                <div className="podcast-item link-item">
-                  <a href="show-details.html" className="full-link"></a>
-                  <div className="podcast-item-thumb">
-                    <Image
-                      width={306}
-                      height={360}
-                      src="/images/shows/podcast/2.jpg"
-                      alt="image"
-                    />
-                    <div className="thumb-content">
-                      <p>10:15 AM</p>
-                      <p>TO</p>
-                      <p>11:35 AM</p>
-                    </div>
-                  </div>
-                  <div className="podcast-item-content">
-                    <div className="artist-thumb">
-                      <Image
-                        width={306}
-                        height={360}
-                        src="/images/artist/2.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="artist-content">
-                      <h5 className="show-name">Music Podcast</h5>
-                      <p className="artist-name">RJ Pavis</p>
-                    </div>
-                  </div>
-                </div>
-                {/* <!-- podcast-item end --> */}
-              </div>
+              {podcastScheduleCardData.map(
+                ({ id, image, artistImage, showName, artistName }) => (
+                  <PodcastScheduleCard
+                    key={id}
+                    image={image}
+                    artistImage={artistImage}
+                    showName={showName}
+                    artistName={artistName}
+                  />
+                )
+              )}
             </Slider>
-            {/* <!-- podcast-slider end--> */}
+            {/*  podcast-slider end */}
+          </div>
+          <div
+            className="tab-pane fade"
+            id="day2-tab-pane"
+            role="tabpanel"
+            aria-labelledby="day2-tab"
+            // tabindex="0"
+          >
+            <Slider {...setting} className="podcast-slider">
+              {podcastScheduleCardData.map(
+                ({ id, image, artistImage, showName, artistName }) => (
+                  <PodcastScheduleCard
+                    key={id}
+                    image={image}
+                    artistImage={artistImage}
+                    showName={showName}
+                    artistName={artistName}
+                  />
+                )
+              )}
+            </Slider>
+            {/*  podcast-slider end */}
+          </div>
+          <div
+            className="tab-pane fade"
+            id="day3-tab-pane"
+            role="tabpanel"
+            aria-labelledby="day3-tab"
+            // tabindex="0"
+          >
+            <Slider {...setting} className="podcast-slider">
+              {podcastScheduleCardData.map(
+                ({ id, image, artistImage, showName, artistName }) => (
+                  <PodcastScheduleCard
+                    key={id}
+                    image={image}
+                    artistImage={artistImage}
+                    showName={showName}
+                    artistName={artistName}
+                  />
+                )
+              )}
+            </Slider>
+            {/*  podcast-slider end */}
+          </div>
+          <div
+            className="tab-pane fade"
+            id="day4-tab-pane"
+            role="tabpanel"
+            aria-labelledby="day4-tab"
+            // tabindex="0"
+          >
+            <Slider {...setting} className="podcast-slider">
+              {podcastScheduleCardData.map(
+                ({ id, image, artistImage, showName, artistName }) => (
+                  <PodcastScheduleCard
+                    key={id}
+                    image={image}
+                    artistImage={artistImage}
+                    showName={showName}
+                    artistName={artistName}
+                  />
+                )
+              )}
+            </Slider>
+            {/*  podcast-slider end */}
+          </div>
+          <div
+            className="tab-pane fade"
+            id="day5-tab-pane"
+            role="tabpanel"
+            aria-labelledby="day5-tab"
+            // tabindex="0"
+          >
+            <Slider {...setting} className="podcast-slider">
+              {podcastScheduleCardData.map(
+                ({ id, image, artistImage, showName, artistName }) => (
+                  <PodcastScheduleCard
+                    key={id}
+                    image={image}
+                    artistImage={artistImage}
+                    showName={showName}
+                    artistName={artistName}
+                  />
+                )
+              )}
+            </Slider>
+            {/*  podcast-slider end */}
+          </div>
+          <div
+            className="tab-pane fade"
+            id="day6-tab-pane"
+            role="tabpanel"
+            aria-labelledby="day6-tab"
+            // tabindex="0"
+          >
+            <Slider {...setting} className="podcast-slider">
+              {podcastScheduleCardData.map(
+                ({ id, image, artistImage, showName, artistName }) => (
+                  <PodcastScheduleCard
+                    key={id}
+                    image={image}
+                    artistImage={artistImage}
+                    showName={showName}
+                    artistName={artistName}
+                  />
+                )
+              )}
+            </Slider>
+            {/*  podcast-slider end */}
+          </div>
+          <div
+            className="tab-pane fade"
+            id="day7-tab-pane"
+            role="tabpanel"
+            aria-labelledby="day7-tab"
+            // tabindex="0"
+          >
+            <Slider {...setting} className="podcast-slider">
+              {podcastScheduleCardData.map(
+                ({ id, image, artistImage, showName, artistName }) => (
+                  <PodcastScheduleCard
+                    key={id}
+                    image={image}
+                    artistImage={artistImage}
+                    showName={showName}
+                    artistName={artistName}
+                  />
+                )
+              )}
+            </Slider>
+            {/*  podcast-slider end */}
           </div>
         </div>
       </div>
     </section>
-    //{/* <!-- podcast section end --> */}
+    //{/*  podcast section end  */}
   );
 };
 

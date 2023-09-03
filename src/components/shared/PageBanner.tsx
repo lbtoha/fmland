@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const PageBanner = ({ pageTitle }: { pageTitle: string }) => {
   return (
-    // <!-- page banner start -->
+    //  page banner start
     <section
       className="inner-page-banner"
       style={{
@@ -23,7 +23,7 @@ const PageBanner = ({ pageTitle }: { pageTitle: string }) => {
         </div>
       </div>
     </section>
-    // <!-- page banner end -->
+    //  page banner end
   );
 };
 

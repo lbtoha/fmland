@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
+import AudioPlayerWithProgressBar from "../homeTwo/AudioPlayerWithProgressBar";
 
 const MusicShow = () => {
   return (
-    // <!-- music show section start -->
+    //  music show section start
     <section className="pt-120 pb-120 section-bg position-relative z-index-p">
       <div className="best-music-dots">
         <Image
@@ -34,11 +36,7 @@ const MusicShow = () => {
 
               <div className="single-audio-player style-three style-sm">
                 <div className="single-audio-content">
-                  <audio
-                    controls
-                    src="assets/audio/main.mp3"
-                    className="style-two"
-                  ></audio>
+                  <AudioPlayerWithProgressBar audio="/audio/main.mp3" />
                 </div>
               </div>
             </div>
@@ -53,15 +51,15 @@ const MusicShow = () => {
                 tellus tincidunt elementum feugiat sed sit ultrices. Adipiscing
                 non lacinia laoreet dui pulvinar tristique.
               </p>
-              <a href="#0" className="btn btn-main mt-40">
+              <Link href="#0" className="btn btn-main mt-40">
                 See More
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </section>
-    //  <!-- music show section end -->
+    //   music show section end
   );
 };
 

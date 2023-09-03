@@ -12,7 +12,7 @@ const Rj = () => {
         ))}
       </div>
       <div className="text-center mt-50">
-        <Link href="radio-jockey" className="btn btn-main">
+        <Link href="/radio-jockey" className="btn btn-main">
           Explore More
         </Link>
       </div>

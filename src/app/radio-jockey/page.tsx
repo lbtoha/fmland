@@ -1,6 +1,6 @@
-import SubscribeNewsLetter from "@/components/pages/home-1/SubscribeNewsLetter";
 import RadioExpertRj from "@/components/pages/radioJockey/RadioExpertRj";
 import PageBanner from "@/components/shared/PageBanner";
+import SubscribeNewsLetter from "@/components/shared/SubscribeNewsLetter";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

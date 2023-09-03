@@ -1,6 +1,6 @@
 const JoinSponsor = () => {
   return (
-    // <!-- sponsor section start -->
+    //  sponsor section start
     <section
       className="dark-overlay pt-120 pb-120"
       style={{ backgroundImage: "url('assets/images/bg/sponsor.jpg')" }}
@@ -14,7 +14,7 @@ const JoinSponsor = () => {
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
         <div className="row justify-content-center">
           <div className="col-xl-8 col-lg-10">
             <form>
@@ -91,7 +91,7 @@ const JoinSponsor = () => {
       </div>
     </section>
 
-    //<!-- sponsor section end -->
+    // sponsor section end
   );
 };
 

@@ -123,7 +123,7 @@
     @extend .align-center;
     @extend .justify-center;
     @extend .bs-5;
-    &.prev {
+    &.slick-prev {
       left: 50%;
       margin-left: -40px;
     }

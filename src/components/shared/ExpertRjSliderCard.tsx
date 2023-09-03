@@ -44,7 +44,7 @@ const ExpertRjSliderCard = ({
           </ul>
         </div>
       </div>
-      {/* <!-- rj-item end --> */}
+      {/*  rj-item end  */}
     </div>
   );
 };

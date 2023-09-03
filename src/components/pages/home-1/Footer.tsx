@@ -1,20 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    // <!-- footer section start -->
+    //  footer section start
     <footer className="footer-section">
       <div className="container">
         <div className="row align-items-end">
           <div className="col-xxl-4 col-xl-5 col-lg-4 text-lg-start text-center">
-            <a href="index.html" className="footer-logo">
+            <Link href="index.html" className="footer-logo">
               <Image
                 width={232}
                 height={64}
                 src="/images/logo.png"
                 alt="image"
               />
-            </a>
+            </Link>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit nibh
               aenean eu, mattis egestas ut et.
@@ -24,22 +25,22 @@ const Footer = () => {
             <nav className="footer-nav">
               <ul className="footer-menu">
                 <li>
-                  <a href="index.html">Home</a>
+                  <Link href="/">Home</Link>
                 </li>
                 <li>
-                  <a href="about.html">About Us</a>
+                  <Link href="about">About Us</Link>
                 </li>
                 <li>
-                  <a href="show-schedule.html">Show Schedule</a>
+                  <Link href="show-schedule">Show Schedule</Link>
                 </li>
                 <li>
-                  <a href="blog.html">Blog</a>
+                  <Link href="blog">Blog</Link>
                 </li>
                 <li>
-                  <a href="sponsor.html">Sponsors</a>
+                  <Link href="sponsor">Sponsors</Link>
                 </li>
                 <li>
-                  <a href="contact.html">Contact</a>
+                  <Link href="contact-us">Contact</Link>
                 </li>
               </ul>
             </nav>
@@ -53,24 +54,24 @@ const Footer = () => {
           <div className="col-md-6">
             <ul className="social-links">
               <li>
-                <a href="#0">
+                <Link href="#0">
                   <i className="fab fa-facebook-f"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#0">
+                <Link href="#0">
                   <i className="fab fa-instagram"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#0">
+                <Link href="#0">
                   <i className="fab fa-linkedin-in"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#0">
+                <Link href="#0">
                   <i className="fab fa-twitter"></i>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

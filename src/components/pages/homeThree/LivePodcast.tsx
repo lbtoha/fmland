@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const LivePodcast = () => {
   return (
-    //<!-- podcast section start -->
+    // podcast section start
     <section className="pt-120 pb-120 position-relative z-index2">
       <div className="wave-shape">
         <Image
@@ -22,7 +22,7 @@ const LivePodcast = () => {
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
 
         <div className="row justify-content-center gy-4">
           <div className="col-lg-4">
@@ -35,9 +35,9 @@ const LivePodcast = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 purus pellentesque.
               </p>
-              <a href="#0" className="text-base arrow-btn mt-4">
+              <Link href="#0" className="text-base arrow-btn mt-4">
                 Explor More
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-4">
@@ -65,15 +65,15 @@ const LivePodcast = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 purus pellentesque.
               </p>
-              <a href="#0" className="text-base arrow-btn mt-4">
+              <Link href="#0" className="text-base arrow-btn mt-4">
                 Explor More
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </section>
-    // <!-- podcast section end -->
+    //  podcast section end
   );
 };
 

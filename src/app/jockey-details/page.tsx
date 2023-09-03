@@ -1,8 +1,8 @@
-import SubscribeNewsLetter from "@/components/pages/home-1/SubscribeNewsLetter";
 import JockeyDetails from "@/components/pages/jockeyDetails/JockeyDetails";
 import LiveShow from "@/components/pages/jockeyDetails/LiveShow";
 import RjShows from "@/components/pages/jockeyDetails/RjShows";
 import PageBanner from "@/components/shared/PageBanner";
+import SubscribeNewsLetter from "@/components/shared/SubscribeNewsLetter";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

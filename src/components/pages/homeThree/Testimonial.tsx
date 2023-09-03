@@ -1,5 +1,10 @@
+import NextArrow from "@/components/shared/NextArrow";
+import PrevArrow from "@/components/shared/PrevArrow";
+import TestimonialCard from "@/components/shared/TestimonialCard";
 import Image from "next/image";
+import { MouseEvent } from "react";
 import Slider from "react-slick";
+import testimonialData from "../../../../public/data/testimonial";
 
 const Testimonial = () => {
   const setting = {
@@ -9,14 +14,22 @@ const Testimonial = () => {
     dots: false,
     arrows: true,
     prevArrow: (
-      <button type="button" className="prev">
-        <i className="fas fa-chevron-left"></i>
-      </button>
+      <PrevArrow
+        currentSlide={0}
+        slideCount={0}
+        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+          console.log("clicked");
+        }}
+      />
     ),
     nextArrow: (
-      <button type="button" className="next">
-        <i className="fas fa-chevron-right"></i>
-      </button>
+      <NextArrow
+        currentSlide={0}
+        slideCount={0}
+        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+          console.log("clicked");
+        }}
+      />
     ),
     autoplay: false,
     cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
@@ -24,7 +37,7 @@ const Testimonial = () => {
     autoplaySpeed: 500,
   };
   return (
-    // <!-- testimonial section start -->
+    //  testimonial section start
     <section className="testimonial-section position-relative z-index2 section-bg pt-120 pb-120 overflow-hidden">
       <div className="bottom-plus">
         <Image
@@ -53,10 +66,13 @@ const Testimonial = () => {
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <Slider {...setting} className="testimonial-slider-two">
+              {testimonialData.map(({ id, ...props }) => (
+                <TestimonialCard key={id} {...props} />
+              ))}
               <div className="single-slide">
                 <div className="testimonial-item style-three quote-top-middle">
                   <i className="fas fa-quote-right testimonial-quote"></i>
@@ -81,7 +97,7 @@ const Testimonial = () => {
                   </p>
                 </div>
               </div>
-              {/* <!-- single-slide end --> */}
+              {/*  single-slide end  */}
               <div className="single-slide">
                 <div className="testimonial-item style-three quote-top-middle">
                   <i className="fas fa-quote-right testimonial-quote"></i>
@@ -106,7 +122,7 @@ const Testimonial = () => {
                   </p>
                 </div>
               </div>
-              {/* <!-- single-slide end --> */}
+              {/*  single-slide end  */}
               <div className="single-slide">
                 <div className="testimonial-item style-three quote-top-middle">
                   <i className="fas fa-quote-right testimonial-quote"></i>
@@ -131,7 +147,7 @@ const Testimonial = () => {
                   </p>
                 </div>
               </div>
-              {/* <!-- single-slide end --> */}
+              {/*  single-slide end  */}
               <div className="single-slide">
                 <div className="testimonial-item style-three quote-top-middle">
                   <i className="fas fa-quote-right testimonial-quote"></i>
@@ -156,14 +172,14 @@ const Testimonial = () => {
                   </p>
                 </div>
               </div>
-              {/* <!-- single-slide end --> */}
+              {/*  single-slide end  */}
             </Slider>
-            {/* <!-- testimonial-slider end --> */}
+            {/*  testimonial-slider end  */}
           </div>
         </div>
       </div>
     </section>
-    //   <!-- testimonial section end -->
+    //    testimonial section end
   );
 };
 

@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const MusicShow = () => {
   return (
-    // <!-- music show section start -->
+    //  music show section start
     <section className="pt-120 pb-120 section-bg">
       <div className="container">
         <div className="row gy-4 justify-content-between align-items-center">
@@ -16,9 +17,9 @@ const MusicShow = () => {
                 tellus tincidunt elementum feugiat sed sit ultrices. Adipiscing
                 non lacinia laoreet dui pulvinar tristique.{" "}
               </p>
-              <a href="show-schedule.html" className="btn btn-main">
+              <Link href="show-schedule" className="btn btn-main">
                 See More
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-6 order-lg-2 order-1">
@@ -56,7 +57,7 @@ const MusicShow = () => {
         </div>
       </div>
     </section>
-    //<!-- music show section end -->
+    // music show section end
   );
 };
 

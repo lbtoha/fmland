@@ -1,5 +1,5 @@
-import SubscribeNewsLetter from "@/components/pages/home-1/SubscribeNewsLetter";
 import PageBanner from "@/components/shared/PageBanner";
+import SubscribeNewsLetter from "@/components/shared/SubscribeNewsLetter";
 import Gest from "@/components/show-details/Gest";
 import ShowDetails from "@/components/show-details/ShowDetails";
 import { Metadata } from "next";

@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Footer = () => {
+const FooterTwo = () => {
   return (
-    // <!-- footer section start -->
+    //  footer section start
     <footer className="footer-section">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-12 text-center">
-            <Link href="index.html" className="footer-logo">
+            <Link href="/index" className="footer-logo">
               <Image
                 width={232}
                 height={64}
@@ -21,22 +21,22 @@ const Footer = () => {
             <nav className="footer-nav">
               <ul className="footer-menu justify-content-center">
                 <li>
-                  <Link href="index.html">Home</Link>
+                  <Link href="/">Home</Link>
                 </li>
                 <li>
-                  <Link href="about.html">About Us</Link>
+                  <Link href="/about">About Us</Link>
                 </li>
                 <li>
-                  <Link href="show-schedule.html">Show Schedule</Link>
+                  <Link href="/show-schedule">Show Schedule</Link>
                 </li>
                 <li>
-                  <Link href="blog.html">Blog</Link>
+                  <Link href="/blog">Blog</Link>
                 </li>
                 <li>
-                  <Link href="sponsor.html">Sponsors</Link>
+                  <Link href="/sponsor">Sponsors</Link>
                 </li>
                 <li>
-                  <Link href="contact.html">Contact</Link>
+                  <Link href="/contact-us">Contact</Link>
                 </li>
               </ul>
             </nav>
@@ -74,8 +74,8 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-    // <!-- footer section end -->
+    //  footer section end
   );
 };
 
-export default Footer;
+export default FooterTwo;

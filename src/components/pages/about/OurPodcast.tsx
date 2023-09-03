@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const OurPodcast = () => {
   return (
-    // <!-- podcast section start -->
+    //  podcast section start
     <section
       className="dark-overlay pt-120 pb-120"
       style={{ backgroundImage: "url('/images/bg/podcast.jpg')" }}
@@ -16,7 +17,7 @@ const OurPodcast = () => {
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
         <div className="row gy-4">
           <div className="col-lg-4">
             <div className="podcard-show-item">
@@ -33,9 +34,9 @@ const OurPodcast = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 purus pellentesque
               </p>
-              <a href="#0" className="podcard-show-link">
-                Explor More
-              </a>
+              <Link href="#0" className="podcard-show-link">
+                Explore More
+              </Link>
             </div>
           </div>
           <div className="col-lg-4">
@@ -54,7 +55,7 @@ const OurPodcast = () => {
                 purus pellentesque
               </p>
               <a href="#0" className="podcard-show-link">
-                Explor More
+                Explore More
               </a>
             </div>
           </div>
@@ -73,15 +74,15 @@ const OurPodcast = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 purus pellentesque
               </p>
-              <a href="#0" className="podcard-show-link">
-                Explor More
-              </a>
+              <Link href="#0" className="podcard-show-link">
+                Explore More
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </section>
-    //  <!-- podcast section end -->
+    //   podcast section end
   );
 };
 

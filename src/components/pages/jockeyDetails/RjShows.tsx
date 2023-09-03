@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const RjShows = () => {
   return (
-    //    <!-- rj shows section start -->
+    //     rj shows section start
     <section className="pt-120 pb-120">
       <div className="container">
         <div className="row">
@@ -12,11 +13,11 @@ const RjShows = () => {
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
         <div className="row gy-4">
           <div className="col-lg-3 col-sm-6">
             <div className="rj-show-item link-item">
-              <a href="show-details.html" className="full-link"></a>
+              <Link href="/show-details" className="full-link"></Link>
               <div className="rj-show-thumb">
                 <Image
                   width={306}
@@ -33,7 +34,7 @@ const RjShows = () => {
           </div>
           <div className="col-lg-3 col-sm-6">
             <div className="rj-show-item link-item">
-              <a href="show-details.html" className="full-link"></a>
+              <Link href="/show-details" className="full-link"></Link>
               <div className="rj-show-thumb">
                 <Image
                   width={306}
@@ -50,7 +51,7 @@ const RjShows = () => {
           </div>
           <div className="col-lg-3 col-sm-6">
             <div className="rj-show-item link-item">
-              <a href="show-details.html" className="full-link"></a>
+              <Link href="/show-details" className="full-link"></Link>
               <div className="rj-show-thumb">
                 <Image
                   width={306}
@@ -67,7 +68,7 @@ const RjShows = () => {
           </div>
           <div className="col-lg-3 col-sm-6">
             <div className="rj-show-item link-item">
-              <a href="show-details.html" className="full-link"></a>
+              <Link href="/show-details" className="full-link"></Link>
               <div className="rj-show-thumb">
                 <Image
                   width={306}
@@ -85,7 +86,7 @@ const RjShows = () => {
         </div>
       </div>
     </section>
-    // <!-- rj shows section end --> */}
+    //  rj shows section end  */}
   );
 };
 

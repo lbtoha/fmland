@@ -1,8 +1,9 @@
 import Image from "next/image";
+import AudioPlayerWithProgressBar from "../homeTwo/AudioPlayerWithProgressBar";
 
 const Banner = () => {
   return (
-    // <!-- banner section start -->
+    //  banner section start
     <section
       className="banner-section style-two"
       style={{ backgroundImage: "url('/images/bg/banner-bg3.jpg')" }}
@@ -15,7 +16,7 @@ const Banner = () => {
             </h2>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
       </div>
       <div className="banner-bottom-player">
         <div className="container">
@@ -35,11 +36,7 @@ const Banner = () => {
                   <p className="audio-time">RJ Alex 1:15-2:45 PM</p>
                 </div>
                 <div className="single-audio-content">
-                  <audio
-                    controls
-                    src="assets/audio/main.mp3"
-                    className="style-two"
-                  ></audio>
+                  <AudioPlayerWithProgressBar audio="/audio/main.mp3" />
                 </div>
               </div>
             </div>
@@ -47,7 +44,7 @@ const Banner = () => {
         </div>
       </div>
     </section>
-    // <!-- banner section end -->
+    //  banner section end
   );
 };
 

@@ -1,8 +1,9 @@
 import Image from "next/image";
+import AudioPlayerWithProgressBar from "../homeTwo/AudioPlayerWithProgressBar";
 
 const LiveShow = () => {
   return (
-    // <!-- rj live show section start -->
+    //  rj live show section start
     <section className="pt-120 pb-120 section-bg">
       <div className="container">
         <div className="row justify-content-center">
@@ -13,7 +14,7 @@ const LiveShow = () => {
             </div>
           </div>
         </div>
-        {/* <!-- row end --> */}
+        {/*  row end  */}
         <div className="row justify-content-center">
           <div className="col-lg-8">
             <div className="rj-live-show single-audio-player style-two style-sm">
@@ -27,20 +28,16 @@ const LiveShow = () => {
                 />
               </div>
               <div className="single-audio-content">
-                <audio
-                  controls
-                  src="assets/audio/main.mp3"
-                  className="style-two"
-                ></audio>
+                <AudioPlayerWithProgressBar audio="assets/audio/main.mp3" />
               </div>
             </div>
-            {/* <!-- single-audio-player end --> */}
+            {/*  single-audio-player end  */}
           </div>
         </div>
       </div>
     </section>
 
-    // <!-- rj live show section end --> */}
+    //  rj live show section end  */}
   );
 };
 
