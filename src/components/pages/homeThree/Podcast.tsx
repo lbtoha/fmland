@@ -4,7 +4,6 @@ import PodcastCard from "./PodcastCard";
 
 const Podcast = () => {
   return (
-    //
     //   podcast section start
     <section
       className="pt-120 pb-120 dark-overlay position-relative z-index2"
@@ -44,7 +43,6 @@ const Podcast = () => {
         {/*  podcast-slider end */}
       </div>
     </section>
-    //
     //   podcast section end
   );
 };

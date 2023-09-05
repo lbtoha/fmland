@@ -1,4 +1,3 @@
-"use client";
 import Banner from "@/components/pages/homeThree/Banner";
 import Experience from "@/components/pages/homeThree/Experience";
 import LatestMusic from "@/components/pages/homeThree/LatestMusic";

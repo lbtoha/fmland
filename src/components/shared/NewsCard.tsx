@@ -23,7 +23,7 @@ const NewsCard = ({ id, blogImage, publishData, author, blogTitle }: Props) => {
           <span className="single-meta">{publishData}</span>
         </div>
         <h4 className="blog-title">
-          <Link href="blog-details">{blogTitle}</a>
+          <Link href="blog-details">{blogTitle}</Link>
         </h4>
         <Link href="/blogDetails" className="blog-btn">
           Read more

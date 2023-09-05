@@ -1,3 +1,4 @@
+"use client";
 import testimonialData from "@/../public/data/testimonial";
 import NextArrow from "@/components/shared/NextArrow";
 import PrevArrow from "@/components/shared/PrevArrow";
