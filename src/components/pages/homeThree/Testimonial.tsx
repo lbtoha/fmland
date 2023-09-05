@@ -1,10 +1,10 @@
+import testimonialData from "@/../public/data/testimonial";
 import NextArrow from "@/components/shared/NextArrow";
 import PrevArrow from "@/components/shared/PrevArrow";
 import TestimonialCard from "@/components/shared/TestimonialCard";
 import Image from "next/image";
 import { MouseEvent } from "react";
 import Slider from "react-slick";
-import testimonialData from "../../../../public/data/testimonial";
 
 const Testimonial = () => {
   const setting = {

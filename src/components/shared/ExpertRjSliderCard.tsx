@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 const ExpertRjSliderCard = ({
   image,
@@ -17,29 +18,29 @@ const ExpertRjSliderCard = ({
         </div>
         <div className="content">
           <h4 className="rj-name">
-            <a href="jockey-details.html">{name}</a>
+            <Link href="jockey-details">{name}</Link>
           </h4>
           <p className="rj-designation">{title}</p>
           <ul className="rj-social-links">
             <li>
-              <a href="#0">
+              <Link href="#0">
                 <i className="fab fa-facebook-f"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#0">
+              <Link href="#0">
                 <i className="fab fa-instagram"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#0">
+              <Link href="#0">
                 <i className="fab fa-linkedin-in"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#0">
+              <Link href="#0">
                 <i className="fab fa-twitter"></i>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

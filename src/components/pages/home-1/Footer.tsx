@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="row align-items-end">
           <div className="col-xxl-4 col-xl-5 col-lg-4 text-lg-start text-center">
-            <Link href="index.html" className="footer-logo">
+            <Link href="index" className="footer-logo">
               <Image
                 width={232}
                 height={64}

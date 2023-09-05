@@ -1,5 +1,6 @@
 "use client";
 import useAudioPlayer from "@/hooks/useAudioPlayer";
+import Link from "next/link";
 
 const AudioPlayerWithProgressBar = ({
   audio = "/audio/main.mp3",
@@ -25,17 +26,21 @@ const AudioPlayerWithProgressBar = ({
     <div className={`maudio ${playToggle && "playing"}`}>
       <audio onTimeUpdate={handleProgress} ref={audioRef} src={audio}></audio>
       <div className="audio-control">
-        <a
+        <Link
           onClick={handleFastReverse}
           href="javascript:;"
           className="fast-reverse"
-        ></a>
-        <a onClick={handlePlayToggle} href="javascript:;" className="play"></a>
-        <a
+        ></Link>
+        <Link
+          onClick={handlePlayToggle}
+          href="javascript:;"
+          className="play"
+        ></Link>
+        <Link
           href="javascript:;"
           onClick={handleFastForward}
           className="fast-forward"
-        ></a>
+        ></Link>
         <div
           className="progress-bar"
           ref={progressBarRef}

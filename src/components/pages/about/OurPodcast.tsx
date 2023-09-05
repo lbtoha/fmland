@@ -54,9 +54,9 @@ const OurPodcast = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 purus pellentesque
               </p>
-              <a href="#0" className="podcard-show-link">
+              <Link href="#0" className="podcard-show-link">
                 Explore More
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-4">

@@ -1,9 +1,9 @@
 "use client";
+import podcastScheduleCardData from "@/../public/data/podcastScheduleCardData";
 import NextArrow from "@/components/shared/NextArrow";
 import PrevArrow from "@/components/shared/PrevArrow";
 import { MouseEvent } from "react";
 import Slider from "react-slick";
-import podcastScheduleCardData from "../../../../public/data/podcastScheduleCardData";
 import PodcastCard from "./PodcastCard";
 
 const PodcastSection = () => {

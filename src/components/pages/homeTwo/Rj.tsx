@@ -1,7 +1,7 @@
+import { radioJockeys } from "@/../public/data/radioJockey";
 import ExpertRj from "@/components/shared/ExpertRj";
 import ExpertRjCardTwo from "@/components/shared/ExpertRjCardTwo";
 import Link from "next/link";
-import { radioJockeys } from "../../../../public/data/radioJockey";
 
 const Rj = () => {
   return (

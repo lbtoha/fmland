@@ -27,7 +27,7 @@ const BestMusic = () => {
                 tellus tincidunt elementum feugiat sed sit ultrices. Adipiscing
                 non lacinia laoreet dui pulvinar tristique.{" "}
               </p>
-              <Link href="about.html" className="btn btn-main">
+              <Link href="about" className="btn btn-main">
                 See More
               </Link>
             </div>

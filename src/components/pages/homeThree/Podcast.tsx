@@ -1,5 +1,5 @@
+import podcastScheduleCardData from "@/../public/data/podcastScheduleCardData";
 import Image from "next/image";
-import podcastScheduleCardData from "../../../../public/data/podcastScheduleCardData";
 import PodcastCard from "./PodcastCard";
 
 const Podcast = () => {

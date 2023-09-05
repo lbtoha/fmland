@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 const ExpertRjCardOne = ({
   image,
@@ -16,30 +17,30 @@ const ExpertRjCardOne = ({
           <Image width={306} height={460} src={image} alt="image" />
           <ul className="rj-social-links">
             <li>
-              <a href="#0">
+              <Link href="#0">
                 <i className="fab fa-facebook-f"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#0">
+              <Link href="#0">
                 <i className="fab fa-instagram"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#0">
+              <Link href="#0">
                 <i className="fab fa-linkedin-in"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#0">
+              <Link href="#0">
                 <i className="fab fa-twitter"></i>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className="content">
           <h5 className="name">
-            <a href="jockey-details.html">{name}</a>
+            <Link href="jockey-details">{name}</Link>
           </h5>
           <p>{title}</p>
         </div>

@@ -1,11 +1,11 @@
 "use client";
+import { radioJockeys } from "@/../public/data/radioJockey";
 import ExpertRj from "@/components/shared/ExpertRj";
 import ExpertRjSliderCard from "@/components/shared/ExpertRjSliderCard";
 import NextArrow from "@/components/shared/NextArrow";
 import PrevArrow from "@/components/shared/PrevArrow";
 import { MouseEvent } from "react";
 import Slider from "react-slick";
-import { radioJockeys } from "../../../../public/data/radioJockey";
 
 const RadioExpertRj = () => {
   const setting = {

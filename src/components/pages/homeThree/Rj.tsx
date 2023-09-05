@@ -1,7 +1,7 @@
+import { radioJockeys } from "@/../public/data/radioJockey";
 import ExpertRjCardOne from "@/components/shared/ExpertRJCardOne";
 import Image from "next/image";
 import Link from "next/link";
-import { radioJockeys } from "../../../../public/data/radioJockey";
 
 const Rj = () => {
   return (

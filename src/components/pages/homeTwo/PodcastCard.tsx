@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Props = {
   image: StaticImageData;
@@ -11,7 +12,7 @@ const PodcastCard = ({ image, artistImage, showName, artistName }: Props) => {
   return (
     <div className="single-slide">
       <div className="podcast-item style-two link-item">
-        <a href="show-details.html" className="full-link"></a>
+        <Link href="show-details" className="full-link"></Link>
         <div className="podcast-item-thumb">
           <Image width={306} height={258} src={image} alt="image" />
           <div className="thumb-content">

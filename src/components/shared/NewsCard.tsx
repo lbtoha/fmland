@@ -13,9 +13,9 @@ const NewsCard = ({ id, blogImage, publishData, author, blogTitle }: Props) => {
   return (
     <div className="blog-item">
       <div className="blog-thumb">
-        <a href="blog-details.html" className="d-block h-100">
+        <Link href="blog-details" className="d-block h-100">
           <Image width={416} height={180} src={blogImage} alt="image" />
-        </a>
+        </Link>
       </div>
       <div className="blog-content">
         <div className="blog-meta">
@@ -23,7 +23,7 @@ const NewsCard = ({ id, blogImage, publishData, author, blogTitle }: Props) => {
           <span className="single-meta">{publishData}</span>
         </div>
         <h4 className="blog-title">
-          <a href="blog-details.html">{blogTitle}</a>
+          <Link href="blog-details">{blogTitle}</a>
         </h4>
         <Link href="/blogDetails" className="blog-btn">
           Read more

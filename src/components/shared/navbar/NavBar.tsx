@@ -70,7 +70,7 @@ const NavBar = () => {
     <nav className="navbar main-navbar navbar-expand-xl">
       <div className="container">
         <Link className="navbar-brand" href="/">
-          <Image src={logo} alt="site logo" />
+          <Image width={151} height={42} src={logo} alt="site logo" />
         </Link>
         <button
           className="navbar-toggler"
@@ -156,7 +156,7 @@ const NavBar = () => {
             ))}
           </ul>
           <Link
-            href="sponsor.html"
+            href="sponsor"
             className={`btn ${
               pathname === "/home-three"
                 ? "white-btn btn-rounded"
