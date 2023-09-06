@@ -49,7 +49,7 @@ const Footer = () => {
         <hr />
         <div className="row gy-2 align-items-center">
           <div className="col-md-6 text-md-start text-center">
-            <p>© 2023 FMland. All rights reserved</p>
+            <p>© {new Date().getFullYear()} FMland. All rights reserved</p>
           </div>
           <div className="col-md-6">
             <ul className="social-links">
