@@ -1,5 +1,4 @@
 "use client";
-import "@/app/globals.css";
 import Footer from "@/components/pages/home-1/Footer";
 import FooterThree from "@/components/pages/homeThree/FooterThree";
 import FooterTwo from "@/components/pages/homeTwo/FooterTwo";

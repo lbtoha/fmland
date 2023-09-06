@@ -9,8 +9,15 @@ const BestMusic = () => {
         <div className="row gy-4 align-items-center justify-content-between">
           <div className="col-lg-6">
             <div className="about-thumb-wrapper">
-              <Image src="/images/about/left-img.jpg" alt="image" />
               <Image
+                width={416}
+                height={550}
+                src="/images/about/left-img.jpg"
+                alt="image"
+              />
+              <Image
+                width={577}
+                height={584}
                 src="/images/about/about-circle.png"
                 alt="image"
                 className="about-thumb-circle"

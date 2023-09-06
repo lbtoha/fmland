@@ -47,7 +47,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const st = window.pageYOffset || document.documentElement.scrollTop;
+      const st = window.scrollY || document.documentElement.scrollTop;
       const navBar = document.querySelector(".main-navbar");
 
       if (st < lastScrollTop) {
